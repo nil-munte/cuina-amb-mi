@@ -28,10 +28,29 @@ L'usuari treballa la recepta amb Claude i Claude la puja. Passos:
    ```
    No pugis mai les fotos originals.
 3. Comprova-ho amb `npm run build` (i `npm run dev` per veure-ho).
-4. Crea una branca `recepta/<nom>`, fes commit i obre una PR amb `gh pr create`. **No fusionis**: l'usuari revisa la PR i la fusiona.
+4. Crea una branca `recepta/<nom>`, fes commit i obre una PR amb `gh pr create` (vegeu la secció següent).
 
-## Normes del repositori
+## Treballar amb pull requests
 
-- Mai push directe a `main`: sempre branca + PR.
-- Commits amb `Nil Munté Guerrero <118383955+nil-munte@users.noreply.github.com>` (ja configurat al repo). Mai l'adreça de feina.
-- Textos de la web en català.
+La branca `main` està protegida: no s'hi pot fer push directe.
+Explicació completa: `docs/governanca.md`.
+
+1. Posa't a `main`, fes `git pull` i crea una branca per al canvi
+   (`git switch -c <nom-del-canvi>`).
+2. Fes els canvis i valida'ls en local (`npm run build`).
+3. Fes push de la branca i obre la PR amb `gh pr create`. Obrir-la no publica
+   res: no cal demanar confirmació.
+4. **No fusionis la PR.** Només la pot fusionar Nil Munté Guerrero (@nil-munte).
+5. Comprova que el check `Build` acaba en verd (`gh pr checks`). Si falla,
+   corregeix-ho i fes push a la mateixa branca.
+
+Quan publiquis a GitHub (commits, PR, issues):
+- **Sense atribució a Claude:** ni `Co-Authored-By: Claude …` als commits ni
+  `Generated with Claude Code` a les PR o issues. Només hi ha de constar la
+  persona que fa el canvi.
+- **Sense adreces de correu** als missatges ni als fitxers que es pugen:
+  identifica les persones pel nom i l'usuari de GitHub. Els commits es fan amb
+  l'adreça noreply de GitHub de @nil-munte (ja configurada a la còpia local);
+  mai amb l'adreça de feina.
+
+Textos de la web en català.
