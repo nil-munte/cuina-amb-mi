@@ -9,7 +9,7 @@ Web de receptes personal. Astro + GitHub Pages: https://nil-munte.github.io/cuin
   - `fotos/`: les fotos en WebP. La foto de portada és sempre `fotos/portada.webp`.
 - `plantilla/recepta.md` és la plantilla base. La capçalera es valida a `src/content.config.ts`: si un camp falta o és incorrecte, el build falla.
 - Dues tipologies: `tipus: feta` (es mostra «Feta per mi», en vermell) i `tipus: participada` («Hi he participat», en blau). Les participades han de tenir `origen` (on o amb qui).
-- Categories fixes: Entrants, Plats principals, Postres.
+- Categories fixes: Entrants, Plats principals, Acompanyaments, Postres.
 - Vídeos: només l'enllaç de YouTube (no llistat) al camp `video`. Mai vídeos al repositori.
 
 ## Afegir una recepta
@@ -17,7 +17,7 @@ Web de receptes personal. Astro + GitHub Pages: https://nil-munte.github.io/cuin
 L'usuari treballa la recepta amb Claude i Claude la puja. Passos:
 
 1. L'original sol ser un Word (`.docx`) amb fotos HEIC o JPG en una carpeta. Llegeix el Word i adapta'l a `plantilla/recepta.md`:
-   - Seccions en aquest ordre: Ingredients → Estris → Procediment → Recomanacions → Notes → Galeria. Les opcionals que no tinguin contingut s'ometen.
+   - Seccions en aquest ordre: Ingredients → Estris → Procediment → Recomanacions → Notes → Inspiració (enllaços on es va inspirar) → Galeria. Si la recepta té parts (puré, salsa...), cada part és un subapartat `###` dins d'Ingredients i de Procediment. Les opcionals que no tinguin contingut s'ometen.
    - Cada ingredient comença per la quantitat i la unitat (`600 g de…`, `2 cebes`, `½ l de…`): així la web pot recalcular les quantitats segons les racions. Unitats reconegudes: g, kg, ml, cl, dl, l.
    - Si falta una dada (racions, categoria, tipus, origen, data), pregunta-la. No inventis res.
    - Pregunta quina foto és la portada i quines fotos van a cada pas. La resta van a Galeria.
