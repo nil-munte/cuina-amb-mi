@@ -4,7 +4,7 @@ data: 2026-01-31
 tipus: feta                  # feta | participada
 origen:                      # només si és participada: on o amb qui (ex.: "A casa de l'Anna, a Olot")
 racions: 4
-categoria: Plats principals  # Entrants | Plats principals | Postres
+categoria: Plats principals  # Entrants | Plats principals | Acompanyaments | Postres
 video:                       # enllaç de YouTube (opcional)
 ---
 
@@ -36,6 +36,9 @@ video:                       # enllaç de YouTube (opcional)
 
 ## Notes
 - ...
+
+## Inspiració
+- [Títol del vídeo o la pàgina](https://...)
 
 ## Galeria
 ![](fotos/02-emplatat.webp)
