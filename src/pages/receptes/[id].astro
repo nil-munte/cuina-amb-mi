@@ -61,7 +61,10 @@ const d = r.data;
   const FR: Record<string, string> = { '0.25': '¼', '0.5': '½', '0.75': '¾' };
   let n = base;
 
-  function format(q: number, u: string) {
+  // Pes i volum: càlcul exacte. Peces que es compten (ous, cebes...): número sencer, mínim 1,
+  // tret que la recepta original ja en posi una fracció (½ culleradeta).
+  function format(q: number, u: string, original: number) {
+    if (!u && Number.isInteger(original)) return String(Math.max(1, Math.round(q)));
     if (q >= 50 && (u === 'g' || u === 'ml')) return String(Math.round(q / 5) * 5);
     let v = Math.round(q * 4) / 4;
     if (v === 0) v = 0.25;
@@ -73,12 +76,16 @@ const d = r.data;
     const k = n / base;
     for (const el of qtys) {
       const u = el.dataset.u ?? '';
-      el.textContent = format(Number(el.dataset.q) * k, u) + (u ? ` ${u}` : '');
+      const original = Number(el.dataset.q);
+      const exacte = original * k;
+      // «≈» quan una peça s'ha hagut d'arrodonir (0,8 ous → ≈ 1).
+      const arrodonit = !u && Number.isInteger(original) && Math.abs(Math.max(1, Math.round(exacte)) - exacte) > 0.01;
+      el.textContent = (arrodonit ? '≈ ' : '') + format(exacte, u, original) + (u ? ` ${u}` : '');
     }
     nEl.textContent = String(n);
     reset.disabled = n === base;
     avis.hidden = n === base;
-    avis.textContent = `Quantitats per a ${n} racions (original: ${base}).`;
+    avis.textContent = `Quantitats aproximades per a ${n} racions (la recepta original és per a ${base}). Les marcades amb ≈ s'han arrodonit.`;
   }
 
   caixa.querySelectorAll<HTMLButtonElement>('[data-d]').forEach((b) =>
