@@ -2,7 +2,8 @@
 // - treu el títol (# ...) i la foto de portada inicial, que la pàgina ja mostra a la capçalera;
 // - agrupa cada secció ## en una nota (<section class="panel">);
 // - marca la quantitat de cada ingredient perquè es pugui recalcular segons les racions;
-// - afegeix el vídeo de YouTube de la capçalera després del procediment.
+// - afegeix el vídeo de YouTube de la capçalera després del procediment;
+// - fa que els enllaços a altres webs s'obrin en una pestanya nova.
 
 const FRACCIONS = { '½': 0.5, '¼': 0.25, '¾': 0.75 };
 const QUANTITAT = /^(\s*)(\d+(?:[.,]\d+)?(?:\s*[½¼¾])?|[½¼¾])(?:\s*(kg|g|ml|cl|dl|l)\b)?/;
@@ -60,6 +61,16 @@ function recorreLi(node, fn) {
   for (const c of node.children || []) {
     if (esElement(c, 'li')) fn(c);
     recorreLi(c, fn);
+  }
+}
+
+function enllacosExterns(node) {
+  for (const c of node.children || []) {
+    if (esElement(c, 'a') && /^https?:\/\//.test(String(c.properties?.href ?? ''))) {
+      c.properties.target = '_blank';
+      c.properties.rel = ['noopener', 'noreferrer'];
+    }
+    enllacosExterns(c);
   }
 }
 
@@ -137,5 +148,6 @@ export default function rehypePanels() {
     }
 
     tree.children = sortida;
+    enllacosExterns(tree);
   };
 }
