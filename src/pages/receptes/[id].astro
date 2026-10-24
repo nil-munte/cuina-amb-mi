@@ -1,0 +1,94 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { dataLlarga, etiquetaTipus, portada, url, type Recepta } from '../../lib/receptes';
+
+export async function getStaticPaths() {
+  const receptes = await getCollection('receptes');
+  return receptes.map((r) => ({ params: { id: r.id }, props: { r } }));
+}
+
+const { r } = Astro.props as { r: Recepta };
+const { Content } = await render(r);
+const foto = portada(r.id);
+const d = r.data;
+---
+<Base title={`${d.titol} · Cuina amb mi`}>
+  <main>
+    <a class="back" href={url()}>← Receptes</a>
+
+    <section class="r-head">
+      <div class="txt">
+        <span class={`badge ${d.tipus}`}>{etiquetaTipus(r)}</span>
+        <h1>{d.titol}</h1>
+        {d.tipus === 'participada'
+          ? <p class="origen">Hi vaig participar: <b>{d.origen}</b> · {dataLlarga(d.data)}</p>
+          : <p class="origen">Feta el {dataLlarga(d.data)}</p>}
+        <div class="facts" id="racions" data-base={d.racions}>
+          <div>
+            <small>Racions</small>
+            <span class="serv">
+              <button type="button" data-d="-1" aria-label="Menys racions">−</button>
+              <b id="serv-n" aria-live="polite">{d.racions}</b>
+              <button type="button" data-d="1" aria-label="Més racions">+</button>
+            </span>
+          </div>
+          <div>
+            <small>Quantitats</small>
+            <button class="reset" id="reset" type="button" disabled>Recepta original · {d.racions} racions</button>
+          </div>
+        </div>
+      </div>
+      {foto && <Image class="r-foto" src={foto} alt={d.titol} width={900} />}
+    </section>
+
+    <div class="r-body">
+      <p class="note-text" id="avis-racions" hidden></p>
+      <Content />
+    </div>
+  </main>
+</Base>
+
+<script>
+  // Recalcula les quantitats marcades dels ingredients segons les racions triades.
+  const caixa = document.getElementById('racions')!;
+  const base = Number(caixa.dataset.base);
+  const nEl = document.getElementById('serv-n')!;
+  const reset = document.getElementById('reset') as HTMLButtonElement;
+  const avis = document.getElementById('avis-racions')!;
+  const qtys = [...document.querySelectorAll<HTMLElement>('.qty')];
+  const FR: Record<string, string> = { '0.25': '¼', '0.5': '½', '0.75': '¾' };
+  let n = base;
+
+  function format(q: number, u: string) {
+    if (q >= 50 && (u === 'g' || u === 'ml')) return String(Math.round(q / 5) * 5);
+    let v = Math.round(q * 4) / 4;
+    if (v === 0) v = 0.25;
+    const sencer = Math.floor(v);
+    return `${sencer || ''}${FR[String(v - sencer)] ?? ''}`;
+  }
+
+  function pinta() {
+    const k = n / base;
+    for (const el of qtys) {
+      const u = el.dataset.u ?? '';
+      el.textContent = format(Number(el.dataset.q) * k, u) + (u ? ` ${u}` : '');
+    }
+    nEl.textContent = String(n);
+    reset.disabled = n === base;
+    avis.hidden = n === base;
+    avis.textContent = `Quantitats per a ${n} racions (original: ${base}).`;
+  }
+
+  caixa.querySelectorAll<HTMLButtonElement>('[data-d]').forEach((b) =>
+    b.addEventListener('click', () => {
+      n = Math.max(1, Math.min(40, n + Number(b.dataset.d)));
+      pinta();
+    }),
+  );
+  reset.addEventListener('click', () => {
+    n = base;
+    pinta();
+  });
+</script>
