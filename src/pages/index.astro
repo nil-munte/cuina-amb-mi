@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { CATEGORIES, dataLlarga, etiquetaTipus, perData, portada, textIngredients, url } from '../lib/receptes';
+
+const receptes = (await getCollection('receptes')).sort(perData);
+const cerca = (s: string) => s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+---
+<Base title="Cuina amb mi">
+  <main>
+    <section class="intro">
+      <p class="tag">Les receptes que he cuinat i aquelles en què he participat, amb fotos de cada pas.</p>
+      <div class="filters">
+        <label class="note-text" for="cerca">Cerca per nom o ingredient</label>
+        <input class="search" id="cerca" type="search" placeholder="Ex.: carbassa, moixernons, Olot…" autocomplete="off" />
+        <div class="chips lvl1" role="group" aria-label="Tipus de recepta">
+          <button class="chip" type="button" data-filtre="tipus" data-v="feta" aria-pressed="false">Fetes per mi</button>
+          <button class="chip" type="button" data-filtre="tipus" data-v="participada" aria-pressed="false">Hi he participat</button>
+        </div>
+        <div class="chips lvl2" role="group" aria-label="Categoria">
+          {CATEGORIES.map((c) => <button class="chip" type="button" data-filtre="cat" data-v={c} aria-pressed="false">{c}</button>)}
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="count" id="count">{receptes.length} {receptes.length === 1 ? 'recepta' : 'receptes'}</p>
+      {receptes.length === 0 && <p class="empty">Encara no hi ha cap recepta. Aviat n'hi haurà.</p>}
+      <div class="grid" id="graella">
+        {receptes.map((r) => {
+          const foto = portada(r.id);
+          const sub = r.data.tipus === 'feta' ? dataLlarga(r.data.data) : r.data.origen!;
+          return (
+            <a class="card" href={url(`receptes/${r.id}/`)} data-tipus={r.data.tipus} data-cat={r.data.categoria}
+               data-text={cerca([r.data.titol, r.data.origen ?? '', textIngredients(r.body)].join(' '))}>
+              {foto ? <Image class="foto" src={foto} alt="" width={640} /> : <div class="foto-buida">Sense foto</div>}
+              <span class={`badge ${r.data.tipus}`}>{etiquetaTipus(r)}</span>
+              <h3>{r.data.titol}</h3>
+              <p class="m">{r.data.racions} racions · {r.data.categoria}</p>
+              <p class="m sub" title={sub}>{sub}</p>
+            </a>
+          );
+        })}
+      </div>
+      <p class="empty" id="cap" hidden>Cap recepta coincideix amb aquests filtres. Treu-ne algun o prova amb un altre ingredient.</p>
+    </section>
+  </main>
+</Base>
+
+<script>
+  // Filtres: cap botó actiu = totes; clicar un botó actiu el desactiva. Els dos nivells i la cerca es combinen.
+  const estat: Record<string, string | null> = { tipus: null, cat: null };
+  const cercaInput = document.getElementById('cerca') as HTMLInputElement;
+  const targetes = [...document.querySelectorAll<HTMLElement>('#graella .card')];
+  const norm = (s: string) => s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().trim();
+
+  function aplica() {
+    const q = norm(cercaInput.value);
+    let n = 0;
+    for (const t of targetes) {
+      const ok = (!estat.tipus || t.dataset.tipus === estat.tipus) && (!estat.cat || t.dataset.cat === estat.cat) && (!q || t.dataset.text!.includes(q));
+      t.hidden = !ok;
+      if (ok) n++;
+    }
+    document.getElementById('count')!.textContent = `${n} ${n === 1 ? 'recepta' : 'receptes'}`;
+    document.getElementById('cap')!.hidden = n > 0 || targetes.length === 0;
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('[data-filtre]').forEach((b) =>
+    b.addEventListener('click', () => {
+      const f = b.dataset.filtre!;
+      estat[f] = estat[f] === b.dataset.v ? null : b.dataset.v!;
+      document.querySelectorAll<HTMLButtonElement>(`[data-filtre="${f}"]`).forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.v === estat[f])));
+      aplica();
+    }),
+  );
+  cercaInput.addEventListener('input', aplica);
+</script>
