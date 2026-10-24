@@ -16,7 +16,7 @@ const receptes = defineCollection({
       tipus: z.enum(['feta', 'participada']),
       origen: z.string().nullish(),
       racions: z.number().int().positive(),
-      categoria: z.enum(['Entrants', 'Plats principals', 'Postres']),
+      categoria: z.enum(['Entrants', 'Plats principals', 'Acompanyaments', 'Postres']),
       video: z.string().url().nullish(),
     })
     .refine((d) => d.tipus !== 'participada' || !!d.origen, {

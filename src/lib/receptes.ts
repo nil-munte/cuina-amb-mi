@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 
 export type Recepta = CollectionEntry<'receptes'>;
 
-export const CATEGORIES = ['Entrants', 'Plats principals', 'Postres'] as const;
+export const CATEGORIES = ['Entrants', 'Plats principals', 'Acompanyaments', 'Postres'] as const;
 
 const MESOS = ['gener', 'febrer', 'març', 'abril', 'maig', 'juny', 'juliol', 'agost', 'setembre', 'octubre', 'novembre', 'desembre'];
 
