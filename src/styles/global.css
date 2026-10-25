@@ -133,7 +133,8 @@ main { display: grid; gap: 32px; min-width: 0; border-left: 2px solid var(--acc)
 .video iframe { width: 100%; height: 100%; border: 0; }
 
 .nomes-print { display: none; }
-.accions { display: flex; flex-wrap: wrap; gap: 8px; }
+.accions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.avis-copiat { font-size: .85rem; color: var(--ok); font-weight: 700; word-break: break-all; }
 .boto { border: 2px solid var(--ink); background: var(--paper); padding: 6px 12px; font-weight: 700; font-size: .9rem; }
 .boto:hover { background: var(--ink); color: var(--paper); }
 
@@ -141,7 +142,15 @@ main { display: grid; gap: 32px; min-width: 0; border-left: 2px solid var(--acc)
 
 /* Imprimir o desar en PDF: full blanc, tinta negra, sense decoració ni botons. */
 @media print {
-  @page { margin: 16mm 14mm; }
+  /* Definir caixes de marge fa que Chrome no hi posi la seva capçalera i peu (data, títol, adreça). */
+  @page {
+    margin: 16mm 14mm;
+    @top-left { content: ""; }
+    @top-center { content: ""; }
+    @top-right { content: ""; }
+    @bottom-left { content: "Cuina amb mi"; font: 8pt "Atkinson Hyperlegible", sans-serif; color: #666; }
+    @bottom-right { content: counter(page) " / " counter(pages); font: 8pt "Atkinson Hyperlegible", sans-serif; color: #666; }
+  }
   body { background: #fff; color: #000; font-size: 11pt; }
   .page { max-width: none; padding: 0; }
   .nomes-print { display: block; font-weight: 700; }
@@ -151,16 +160,18 @@ main { display: grid; gap: 32px; min-width: 0; border-left: 2px solid var(--acc)
   .r-head h1 { font-size: 26pt; color: #000; }
   .origen, .origen b, .badge { color: #000; }
   .r-foto { border: 0; box-shadow: none; }
-  .r-body { max-width: none; gap: 12pt; }
+  .r-body { max-width: none; gap: 16pt; }
   .panel, .panel.reco { background: none; box-shadow: none; padding: 0; break-inside: auto; }
   .panel::before, .panel::after { display: none; }
-  .panel h2 { color: #000; font-size: 18pt; border-bottom: 1px solid #000; padding-bottom: 2pt; break-after: avoid; }
+  .panel { gap: 6pt; }
+  .panel h2 { color: #000; font-size: 18pt; border-bottom: 1px solid #000; padding-bottom: 2pt; margin-bottom: 4pt; break-after: avoid; }
   .panel h3 { break-after: avoid; }
   .panel li { break-inside: avoid; }
   .panel.reco p, .panel.reco li { font: inherit; color: #000; }
   .panel-procediment img { max-width: 60mm; border: 0; box-shadow: none; }
   a { color: #000; text-decoration: none; }
-  .panel-inspiracio a::after { content: " (" attr(href) ")"; font-size: 8pt; word-break: break-all; }
+  .panel-inspiracio li { margin-bottom: 4pt; }
+  .panel-inspiracio a::after { content: "\A" attr(href); white-space: pre-wrap; font-size: 8pt; color: #444; word-break: break-all; }
 }
 @media (max-width: 600px) {
   main { padding-left: 14px; }
