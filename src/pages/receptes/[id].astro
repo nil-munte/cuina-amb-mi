@@ -39,6 +39,10 @@ const d = r.data;
             <button class="reset" id="reset" type="button" disabled>Recepta original · {d.racions} racions</button>
           </div>
         </div>
+        <p class="nomes-print" id="racions-print">Per a {d.racions} racions</p>
+        <div class="accions">
+          <button class="boto" id="pdf" type="button">Imprimeix o desa en PDF</button>
+        </div>
       </div>
       {foto && <Image class="r-foto" src={foto} alt={d.titol} width={900} />}
     </section>
@@ -86,6 +90,8 @@ const d = r.data;
     reset.disabled = n === base;
     avis.hidden = n === base;
     avis.textContent = `Quantitats aproximades per a ${n} racions (la recepta original és per a ${base}). Les marcades amb ≈ s'han arrodonit.`;
+    document.getElementById('racions-print')!.textContent =
+      n === base ? `Per a ${n} racions` : `Per a ${n} racions (quantitats aproximades; la recepta original és per a ${base})`;
   }
 
   caixa.querySelectorAll<HTMLButtonElement>('[data-d]').forEach((b) =>
@@ -98,4 +104,7 @@ const d = r.data;
     n = base;
     pinta();
   });
+
+  // El PDF surt amb les racions triades; el diàleg d'imprimir del navegador permet desar-lo com a PDF.
+  document.getElementById('pdf')!.addEventListener('click', () => window.print());
 </script>
