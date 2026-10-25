@@ -44,7 +44,12 @@ const descripcio = `${etiquetaTipus(r)} · ${d.racions} racions · ${d.categoria
         </div>
         <p class="nomes-print" id="racions-print">Per a {d.racions} racions</p>
         <div class="accions">
-          <button class="boto" id="compartir" type="button" data-titol={d.titol}>Comparteix</button>
+          <button class="boto boto-icona" id="compartir" type="button" data-titol={d.titol} aria-label="Comparteix" title="Comparteix">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+              <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4" />
+            </svg>
+          </button>
           <button class="boto" id="pdf" type="button">Imprimeix o desa en PDF</button>
           <span class="avis-copiat" id="copiat" role="status" aria-live="polite"></span>
         </div>
