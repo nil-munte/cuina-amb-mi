@@ -5,8 +5,12 @@ import { url } from '../lib/receptes';
 interface Props {
   title: string;
   description?: string;
+  imatge?: string;
 }
-const { title, description = 'Les receptes que he cuinat i aquelles en què he participat, amb fotos de cada pas.' } = Astro.props;
+const { title, description = 'Les receptes que he cuinat i aquelles en què he participat, amb fotos de cada pas.', imatge } = Astro.props;
+// Vista prèvia quan es comparteix l'enllaç (WhatsApp, Telegram, xarxes).
+const adreca = new URL(Astro.url.pathname, Astro.site).href;
+const imatgeAbsoluta = imatge ? new URL(imatge, Astro.site).href : undefined;
 ---
 <!doctype html>
 <html lang="ca">
@@ -15,6 +19,15 @@ const { title, description = 'Les receptes que he cuinat i aquelles en què he p
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={adreca} />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Cuina amb mi" />
+    <meta property="og:locale" content="ca_ES" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={adreca} />
+    {imatgeAbsoluta && <meta property="og:image" content={imatgeAbsoluta} />}
+    <meta name="twitter:card" content={imatgeAbsoluta ? 'summary_large_image' : 'summary'} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
