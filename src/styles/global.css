@@ -150,13 +150,13 @@ main { display: grid; gap: 32px; min-width: 0; border-left: 2px solid var(--acc)
     @top-left { content: ""; }
     @top-center { content: ""; }
     @top-right { content: ""; }
-    @bottom-left { content: "Cuina amb mi"; font: 8pt "Atkinson Hyperlegible", sans-serif; color: #666; }
+    @bottom-left { content: "Cuina amb mi · Nil Munté Guerrero"; font: 8pt "Atkinson Hyperlegible", sans-serif; color: #666; }
     @bottom-right { content: counter(page) " / " counter(pages); font: 8pt "Atkinson Hyperlegible", sans-serif; color: #666; }
   }
   body { background: #fff; color: #000; font-size: 11pt; }
   .page { max-width: none; padding: 0; }
   .nomes-print { display: block; font-weight: 700; }
-  .site-head, .back, .facts, .accions, #avis-racions, .panel-video, .panel-galeria { display: none !important; }
+  .badge, .site-head, .back, .facts, .accions, #avis-racions, .panel-video, .panel-galeria { display: none !important; }
   main { border: 0; padding: 0; gap: 14pt; }
   .r-head { grid-template-columns: 1fr 34%; gap: 12pt; align-items: start; }
   .r-head h1 { font-size: 26pt; color: #000; }
