@@ -29,6 +29,7 @@ const imatgeAbsoluta = imatge ? new URL(imatge, Astro.site).href : undefined;
     {imatgeAbsoluta && <meta property="og:image" content={imatgeAbsoluta} />}
     <meta name="twitter:card" content={imatgeAbsoluta ? 'summary_large_image' : 'summary'} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={url('apple-touch-icon.png')} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" />
