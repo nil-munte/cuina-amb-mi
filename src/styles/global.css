@@ -157,18 +157,20 @@ main { display: grid; gap: 32px; min-width: 0; border-left: 2px solid var(--acc)
   .page { max-width: none; padding: 0; }
   .nomes-print { display: block; font-weight: 700; }
   .badge, .site-head, .back, .facts, .accions, #avis-racions, .panel-video, .panel-galeria { display: none !important; }
-  main { border: 0; padding: 0; gap: 14pt; }
-  .r-head { grid-template-columns: 1fr 34%; gap: 12pt; align-items: start; }
+  /* En paper, tot en bloc: les graelles (display: grid) es parteixen malament entre pàgines i el text se solapa. */
+  main, .r-head, .r-head .txt, .r-body, .panel, .panel ul, .panel ol { display: block; }
+  main { border: 0; padding: 0; }
+  .r-head { margin-bottom: 14pt; }
+  .r-head .txt > * + * { margin-top: 6pt; }
   .r-head h1 { font-size: 26pt; color: #000; }
-  .origen, .origen b, .badge { color: #000; }
-  .r-foto { border: 0; box-shadow: none; }
-  .r-body { max-width: none; gap: 16pt; }
-  .panel, .panel.reco { background: none; box-shadow: none; padding: 0; break-inside: auto; }
+  .origen, .origen b { color: #000; }
+  .r-foto { width: 70mm; margin-top: 8pt; border: 0; box-shadow: none; }
+  .r-body { max-width: none; }
+  .panel, .panel.reco { background: none; box-shadow: none; padding: 0; margin: 0 0 16pt; }
   .panel::before, .panel::after { display: none; }
-  .panel { gap: 6pt; }
-  .panel h2 { color: #000; font-size: 18pt; border-bottom: 1px solid #000; padding-bottom: 2pt; margin-bottom: 4pt; break-after: avoid; }
-  .panel h3 { break-after: avoid; }
-  .panel li { break-inside: avoid; }
+  .panel h2 { color: #000; font-size: 18pt; border-bottom: 1px solid #000; padding-bottom: 2pt; margin: 0 0 6pt; break-after: avoid; }
+  .panel h3 { margin: 10pt 0 4pt; break-after: avoid; }
+  .panel li { margin-bottom: 4pt; break-inside: avoid; }
   .panel.reco p, .panel.reco li { font: inherit; color: #000; }
   .panel-procediment img { max-width: 60mm; border: 0; box-shadow: none; }
   a { color: #000; text-decoration: none; }
