@@ -164,7 +164,8 @@ main { display: grid; gap: 32px; min-width: 0; border-left: 2px solid var(--acc)
   .r-head .txt > * + * { margin-top: 6pt; }
   .r-head h1 { font-size: 26pt; color: #000; }
   .origen, .origen b { color: #000; }
-  .r-foto { width: 70mm; margin-top: 8pt; border: 0; box-shadow: none; }
+  /* Els PDFs van sense imatges: ni portada ni fotos dels passos (la galeria ja no sura). */
+  img { display: none !important; }
   .r-body { max-width: none; }
   .panel, .panel.reco { background: none; box-shadow: none; padding: 0; margin: 0 0 16pt; }
   .panel::before, .panel::after { display: none; }
@@ -172,7 +173,6 @@ main { display: grid; gap: 32px; min-width: 0; border-left: 2px solid var(--acc)
   .panel h3 { margin: 10pt 0 4pt; break-after: avoid; }
   .panel li { margin-bottom: 4pt; break-inside: avoid; }
   .panel.reco p, .panel.reco li { font: inherit; color: #000; }
-  .panel-procediment img { max-width: 60mm; border: 0; box-shadow: none; }
   a { color: #000; text-decoration: none; }
   .panel-inspiracio li { margin-bottom: 4pt; }
   .panel-inspiracio a::after { content: "\A" attr(href); white-space: pre-wrap; font-size: 8pt; color: #444; word-break: break-all; }
