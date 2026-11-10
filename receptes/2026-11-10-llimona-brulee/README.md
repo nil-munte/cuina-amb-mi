@@ -45,7 +45,7 @@ Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la ll
 ## Notes
 - Recepta inspirada en un reel d'Ed Cudlipp (@ed.cudlipp), cuinada a casa el 10 de novembre de 2026.
 - S'ha fet servir nata del 35% de matèria grassa. Durant la cocció, la barreja bullia però no deixava capa a l'espàtula; s'hi va incorporar el suc fora del foc igualment.
-- En aquesta preparació han sortit 8 meitats de llimona i 3 pots de crema. El rendiment depèn de la mida de les llimones i dels recipients.
+- En aquesta preparació han sortit 8 meitats de llimona i 3 pots de crema (11 postres en total). El rendiment depèn de la mida de les llimones i dels recipients.
 - Les fotografies mostren les llimones acabades d'omplir, abans del refredament i de caramel·litzar el sucre.
 
 ## Inspiració
