@@ -34,7 +34,7 @@ Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la ll
 
 2. Passa la polpa per un colador fi i mesura uns 110 ml de suc. Reserva'l.
 3. Ratlla la pell de la 4a llimona.
-4. A la cassola, posa-hi la nata, el sucre blanc i la ratlladura de llimona. Porta-ho a ebullició suau i deixa-ho reduir lleugerament, remenant, fins que cobreixi el revers d'una cullera, tal com indica el vídeo original.
+4. A la cassola, posa-hi la nata, el sucre blanc i la ratlladura de llimona. Porta-ho a ebullició suau i deixa-ho reduir lleugerament, remenant, fins que cobreixi el revers d'una cullera.
 
    ![La nata amb el sucre i la ratlladura de llimona, bullint suaument a la cassola](fotos/02-nata-bullint.webp)
 
@@ -55,7 +55,7 @@ Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la ll
 - Recepta inspirada en un reel d'Ed Cudlipp (@ed.cudlipp), cuinada a casa el 10 de novembre de 2026.
 - S'ha fet servir nata del 35% de matèria grassa. Durant la cocció, la barreja bullia però no deixava capa a l'espàtula; s'hi va incorporar el suc fora del foc igualment.
 - En aquesta preparació han sortit 8 meitats de llimona i 3 pots de crema (11 postres en total). El rendiment depèn de la mida de les llimones i dels recipients.
-- Les fotografies del procediment mostren les llimones partides i la crema a la cassola; les de la galeria, les llimones acabades d'omplir, abans del refredament i de caramel·litzar el sucre.
+- Del procés se'n van fer fotografies: les llimones partides i la crema a la cassola, i les llimones ja omplertes abans del refredament i de caramel·litzar el sucre.
 
 ## Inspiració
 - [Lemon brûlée, reel d'Ed Cudlipp a Instagram](https://www.instagram.com/reel/DZsXDPyJfak/)
