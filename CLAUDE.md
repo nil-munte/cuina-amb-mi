@@ -12,8 +12,8 @@ Web de receptes personal. Astro + GitHub Pages: https://nil-munte.github.io/cuin
 - Categories fixes: Entrants, Plats principals, Acompanyaments, Postres.
 - Vídeos: només l'enllaç de YouTube (no llistat) al camp `video`. Mai vídeos al repositori.
 - PDF, sempre **sense imatges** (ni la portada ni les fotos dels passos ni la galeria), només text:
-  - Botó «Imprimeix o desa en PDF»: `window.print()` amb els estils `@media print` de `src/styles/global.css`. Surt amb les racions triades a la web.
-  - Botó «PDF en finestra nova»: un PDF real generat al build a `/receptes/<id>.pdf` (`src/pages/receptes/[id].pdf.ts`), pensat per obrir-lo en una pestanya nova i compartir-lo (WhatsApp, correu...). Sempre amb les racions originals.
+  - Botó amb icona d'impressora: `window.print()` amb els estils `@media print` de `src/styles/global.css`. Surt amb les racions triades a la web. Nom accessible: «Imprimeix o desa en PDF».
+  - Botó «PDF»: un PDF real generat al build a `/receptes/<id>.pdf` (`src/pages/receptes/[id].pdf.ts`), s'obre en una pestanya nova per veure'l i compartir-lo (WhatsApp, correu...). Sempre amb les racions originals. Nom accessible: «PDF en finestra nova».
 
 ## Afegir una recepta
 

@@ -50,8 +50,14 @@ const descripcio = `${etiquetaTipus(r)} · ${d.racions} racions · ${d.categoria
               <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4" />
             </svg>
           </button>
-          <button class="boto" id="pdf" type="button">Imprimeix o desa en PDF</button>
-          <a class="boto" href={url(`receptes/${r.id}.pdf`)} target="_blank" rel="noopener">PDF en finestra nova</a>
+          <button class="boto boto-icona" id="pdf" type="button" aria-label="Imprimeix o desa en PDF" title="Imprimeix o desa en PDF">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9V3h12v6" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+          </button>
+          <a class="boto" href={url(`receptes/${r.id}.pdf`)} target="_blank" rel="noopener" aria-label="PDF en finestra nova" title="Obre el PDF en una finestra nova">PDF</a>
           <span class="avis-copiat" id="copiat" role="status" aria-live="polite"></span>
         </div>
       </div>
