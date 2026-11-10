@@ -14,6 +14,7 @@ Web de receptes personal. Astro + GitHub Pages: https://nil-munte.github.io/cuin
 - PDF, sempre **sense imatges** (ni la portada ni les fotos dels passos ni la galeria), només text:
   - Botó amb icona d'impressora: `window.print()` amb els estils `@media print` de `src/styles/global.css`. Surt amb les racions triades a la web. Nom accessible: «Imprimeix o desa en PDF».
   - Botó «PDF»: un PDF real generat al build a `/receptes/<id>.pdf` (`src/pages/receptes/[id].pdf.ts`), s'obre en una pestanya nova per veure'l i compartir-lo (WhatsApp, correu...). Sempre amb les racions originals. Nom accessible: «PDF en finestra nova».
+  - Els textos de la recepta no poden remetre a vídeos ni a fotos («tal com indica el vídeo», «com es veu a la foto»): al PDF no n'hi ha. Si cal, descriu el procés.
 
 ## Afegir una recepta
 
