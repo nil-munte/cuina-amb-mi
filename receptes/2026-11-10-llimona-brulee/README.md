@@ -9,6 +9,8 @@ video:
 
 # Llimona brûlée
 
+![Les llimones omplertes de crema i tres pots, abans de refredar-les i caramel·litzar-les](fotos/portada.webp)
+
 Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la llimona, amb una crosta de sucre torrat com la d'una crema catalana.
 
 ## Ingredients
@@ -29,7 +31,7 @@ Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la ll
 1. Renta les llimones. Parteix-ne 3 per la meitat a lo llarg i buida'n la polpa amb una cullera, sense trencar la closca: seran els recipients de les postres.
 2. Passa la polpa per un colador fi i mesura uns 110 ml de suc. Reserva'l.
 3. Ratlla la pell de la 4a llimona.
-4. A la cassola, posa-hi la nata, el sucre blanc i la ratlladura de llimona. Porta-ho a foc suau fins que arrenqui el bull i deixa-ho reduir, remenant, fins que la crema cobreixi el revers d'una cullera. En passar-hi el dit, hi ha de quedar una ratlla neta. El temps depèn de l'olla i del foc: guia't per la textura, no pels minuts.
+4. A la cassola, posa-hi la nata, el sucre blanc i la ratlladura de llimona. Porta-ho a ebullició suau i deixa-ho reduir lleugerament, remenant, fins que cobreixi el revers d'una cullera, tal com indica el vídeo original.
 5. Fora del foc, incorpora-hi els 110 ml de suc de llimona mentre hi remenes amb les varetes, fins que quedi una crema fina i homogènia.
 6. Omple les closques de llimona amb la crema i posa-les a la nevera un mínim de 6 hores o, millor, tota la nit.
 7. Just abans de servir, cobreix cada meitat amb una capa prima de sucre moreno i crema'l amb el bufador fins que es caramel·litzi.
@@ -41,8 +43,14 @@ Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la ll
 - Si no tens bufador, pots fer servir el grill del forn ben fort, vigilant-los de molt a prop perquè no es cremi la closca.
 
 ## Notes
-- Recepta vista en un reel d'Instagram d'Ed Cudlipp (@ed.cudlipp); encara no l'hem cuinat.
-- El reel no diu en quin moment s'hi afegeix el suc: aquí s'interpreta seguint la tècnica habitual del *lemon posset*, incorporant el suc a la nata calenta fora del foc després de reduir-la, que és el que fa quallar la crema.
+- Recepta inspirada en un reel d'Ed Cudlipp (@ed.cudlipp), cuinada a casa el 10 de novembre de 2026.
+- S'ha fet servir nata del 35% de matèria grassa. Durant la cocció, la barreja bullia però no deixava capa a l'espàtula; s'hi va incorporar el suc fora del foc igualment.
+- En aquesta preparació han sortit 8 meitats de llimona i 3 pots de crema. El rendiment depèn de la mida de les llimones i dels recipients.
+- Les fotografies mostren les llimones acabades d'omplir, abans del refredament i de caramel·litzar el sucre.
 
 ## Inspiració
 - [Lemon brûlée, reel d'Ed Cudlipp a Instagram](https://www.instagram.com/reel/DZsXDPyJfak/)
+
+## Galeria
+![Les llimones omplertes de crema, vistes des de dalt](fotos/llimones-omplenes-cenital.webp)
+![Les llimones omplertes de crema, de costat](fotos/llimones-omplenes-costat.webp)
