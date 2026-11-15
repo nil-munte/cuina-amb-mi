@@ -69,5 +69,5 @@ video:
 
 ## Notes
 - Recepta feta el 27 d'octubre de 2026 amb l'Aleix, professor del curs de cuina saludable de Riudoms.
-- Per al taller: la pastanaga és rica en betacarotè, precursor de vitamina A; els cigrons aporten fibra, proteïna vegetal i hidrats de carboni complexos; la tahina i els festucs aporten greixos insaturats i minerals, i el iogurt natural aporta proteïnes i calci sense sucres afegits.
+- Per al taller: la pastanaga és rica en betacarotè, precursor de la vitamina A; els cigrons aporten fibra, proteïna vegetal i hidrats de carboni complexos; la tahina i els festucs aporten greixos insaturats i minerals, i el iogurt natural aporta proteïnes i calci sense sucres afegits.
 - El document del curs descriu aquest plat com a vegetarià i de cocció al forn.

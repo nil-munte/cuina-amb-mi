@@ -22,7 +22,7 @@ video:
 
 ### Per a la melmelada de préssec
 - Préssecs
-- Sucre: un 30% del pes del préssec
+- Sucre: un 30% del pes dels préssecs
 - Suc de mitja llimona per cada quilo de fruita
 
 ## Procediment
@@ -30,7 +30,7 @@ video:
 ### La panacota
 1. En un bol, barregem la gelatina, 60 ml de llet freda i l'extracte de vainilla. Ho deixem reposar 5 minuts perquè la gelatina s'activi.
 2. En una olla, barregem la nata, els 225 ml de llet restants, el sucre i un polsim generós de sal. Ho escalfem fins que fumegi, sense que bulli, perquè el gust de la llet canviaria. Anem remenant.
-3. Quan estigui, ho retirem del foc i hi afegim la barreja de gelatina.
+3. Quan fumegi, ho retirem del foc i hi afegim la barreja de gelatina.
 4. Ho deixem refredar una estona en un recipient gran, remenant de tant en tant perquè la gelatina es reparteixi bé.
 5. Quan sigui tebi, ho posem en gotets colant-ho perquè quedi ben llis. Amb un bufador podem rebentar les bombolles que hagin quedat.
 6. Hi posem paper film al damunt i ho deixem reposar entre 3 i 4 hores a la nevera.

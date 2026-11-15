@@ -24,14 +24,14 @@ Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la ll
 - Colador fi
 - Ratllador
 - Varetes
-- Safata o motlle perquè les meitats de llimona queden estables
+- Safata o motlle perquè les meitats de llimona quedin estables
 - Bufador de cuina
 
 ## Procediment
-1. Renta les llimones. Parteix-ne 3 per la meitat a lo llarg i buida'n la polpa amb una cullera, sense trencar la closca: seran els recipients de les postres.
+1. Renta les llimones. Parteix-ne 3 per la meitat de llarg i buida'n la polpa amb una cullera, sense trencar la closca: seran els recipients de les postres.
 
 2. Passa la polpa per un colador fi i mesura uns 110 ml de suc. Reserva'l.
-3. Ratlla la pell de la 4a llimona.
+3. Ratlla la pell de la quarta llimona.
 4. A la cassola, posa-hi la nata, el sucre blanc i la ratlladura de llimona. Porta-ho a ebullició suau i deixa-ho reduir lleugerament, remenant, fins que cobreixi el revers d'una cullera.
 
 5. Fora del foc, incorpora-hi els 110 ml de suc de llimona mentre hi remenes amb les varetes, fins que quedi una crema fina i homogènia.
@@ -47,7 +47,7 @@ Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la ll
 
 ## Notes
 - Recepta inspirada en un reel d'Ed Cudlipp (@ed.cudlipp), cuinada a casa el 10 de novembre de 2026.
-- S'ha fet servir nata del 35% de matèria grassa. Durant la cocció, la barreja bullia però no deixava capa a l'espàtula; s'hi va incorporar el suc fora del foc igualment.
+- S'ha fet servir nata del 35% de matèria grassa. Durant la cocció, la barreja bullia però no deixava capa a la cullera; s'hi va incorporar el suc fora del foc igualment.
 - En aquesta preparació han sortit 8 meitats de llimona i 3 pots de crema (11 postres en total). El rendiment depèn de la mida de les llimones i dels recipients.
 
 ## Inspiració

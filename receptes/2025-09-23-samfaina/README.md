@@ -24,5 +24,5 @@ video:
 3. Ho sofregim, hi afegim sal i anem remenant les verdures a foc mitjà-alt.
 4. Quan comencin a estar cuites, baixem a foc mitjà.
 5. Quan estiguin força cuites, hi posem el tomàquet triturat.
-6. Quan comenci a reduir i ja no quedi líquid, tastem el punt de sal i el corregim si cal. En aquest punt podem apagar el foc.
-7. Ho deixem reposar uns 5 minuts i ja tenim la recepta acabada. Ben senzill i català!
+6. Quan el tomàquet s'hagi reduït i ja no quedi líquid, tastem el punt de sal i el corregim si cal. En aquest punt podem apagar el foc.
+7. Ho deixem reposar uns 5 minuts i ja tenim la samfaina feta. Ben senzill i català!

@@ -53,8 +53,8 @@ video:
 
 ### El puré
 1. Rentem les patates.
-2. Les pelem i en traiem les impureses.
-3. Tallem les patates a trossos (mitja patata, per exemple). Aquest pas es pot fer després de bullir-les: en alguns llocs recomanen no pelar-les abans perquè agafen més gust.
+2. Les pelem i en traiem les impureses. També es poden pelar després de bullir-les: en alguns llocs recomanen no pelar-les abans perquè agafen més gust.
+3. Tallem les patates a trossos (mitja patata, per exemple).
 4. Les posem en una cassola amb aigua a temperatura ambient i una mica de sal.
 5. Les portem a ebullició a foc alt.
 6. Baixem el foc i les cuinem uns 15 minuts. Estaran llestes quan les puguem punxar amb el ganivet sense fer força.
