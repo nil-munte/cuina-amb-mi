@@ -5,7 +5,7 @@ tipus: feta
 origen:
 racions: 6
 categoria: Acompanyaments
-video:
+video: https://www.youtube.com/watch?v=2YZghYmMju4
 ---
 
 # Samfaina

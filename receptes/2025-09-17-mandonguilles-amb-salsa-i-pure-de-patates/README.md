@@ -5,7 +5,7 @@ tipus: feta
 origen:
 racions: 5
 categoria: Plats principals
-video:
+video: https://www.youtube.com/watch?v=FkkWTyWR_mA
 ---
 
 # Mandonguilles amb salsa i puré de patates

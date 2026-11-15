@@ -89,19 +89,34 @@ function notaVideo(id) {
       {
         type: 'element',
         tagName: 'div',
-        properties: { className: ['video'] },
+        properties: { className: ['video'], dataId: id },
         children: [
           {
             type: 'element',
-            tagName: 'iframe',
-            properties: {
-              src: `https://www.youtube-nocookie.com/embed/${id}`,
-              title: 'Vídeo de la recepta',
-              loading: 'lazy',
-              allow: 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
-              allowFullScreen: true,
-            },
-            children: [],
+            tagName: 'button',
+            properties: { type: 'button', className: ['video-play'], ariaLabel: 'Reprodueix el vídeo' },
+            children: [
+              {
+                type: 'element',
+                tagName: 'img',
+                properties: { src: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`, alt: '', loading: 'lazy' },
+                children: [],
+              },
+              { type: 'element', tagName: 'span', properties: { className: ['video-icona'], ariaHidden: 'true' }, children: [] },
+            ],
+          },
+          {
+            type: 'element',
+            tagName: 'noscript',
+            properties: {},
+            children: [
+              {
+                type: 'element',
+                tagName: 'a',
+                properties: { href: `https://www.youtube.com/watch?v=${id}` },
+                children: [{ type: 'text', value: 'Obre el vídeo a YouTube' }],
+              },
+            ],
           },
         ],
       },
