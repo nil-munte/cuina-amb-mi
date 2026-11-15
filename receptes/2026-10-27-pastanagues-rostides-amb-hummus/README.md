@@ -55,15 +55,9 @@ video:
 1. Escalfem el forn a 220 °C. Pelem les pastanagues i, si són gruixudes, les partim de llarg.
 2. Les barregem amb l'oli, la harissa, el comí, el pebre vermell fumat, la sal i el pebre negre. Les repartim en una safata i les rostim 25–30 minuts, fins que siguin tendres i daurades. Les girem a mitja cocció.
 
-   ![Pastanagues rostides a la safata](fotos/pastanagues-rostides.webp)
-
 3. Triturem els cigrons amb la tahina, el suc de llimona, l'all, l'oli i la sal. Afegim l'aigua freda a poc a poc fins a obtenir una crema fina, lleugera i untuosa.
 
-   ![Hummus en preparació](fotos/hummus-en-preparacio.webp)
-
 4. Barregem el iogurt amb el suc i la ratlladura de llimona, la menta picada i un pessic de sal. El reservem a la nevera.
-
-   ![Salsa de iogurt amb menta](fotos/salsa-de-iogurt.webp)
 
 5. Piquem els festucs de manera irregular. Desgranem la magrana i piquem les herbes fresques.
 6. Estenem una base generosa d'hummus en una safata. Hi posem les pastanagues calentes al damunt, afegim petites cullerades de salsa de iogurt i acabem amb els festucs, la magrana, les herbes i un fil d'oli.
