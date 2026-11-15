@@ -5,7 +5,7 @@ tipus: feta
 origen:
 racions: 8
 categoria: Postres
-video:
+video: https://www.youtube.com/watch?v=XnzAImAqDQ4
 ---
 
 # Panacota amb melmelada de préssec

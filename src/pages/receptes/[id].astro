@@ -122,6 +122,18 @@ const descripcio = `${etiquetaTipus(r)} · ${d.racions} racions · ${d.categoria
     pinta();
   });
 
+  // Vídeo: només es carrega l'iframe de YouTube quan es prem la miniatura.
+  document.querySelectorAll<HTMLElement>('.video[data-id]').forEach((v) => {
+    v.querySelector('.video-play')?.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${v.dataset.id}?autoplay=1`;
+      f.title = 'Vídeo de la recepta';
+      f.allow = 'autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      v.replaceChildren(f);
+    });
+  });
+
   // El PDF surt amb les racions triades; el diàleg d'imprimir del navegador permet desar-lo com a PDF.
   document.getElementById('pdf')!.addEventListener('click', () => window.print());
 
