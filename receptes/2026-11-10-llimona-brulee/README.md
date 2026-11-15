@@ -28,10 +28,9 @@ Una crema de llimona (estil *posset*) servida dins de la mateixa closca de la ll
 - Bufador de cuina
 
 ## Procediment
-1. Renta les llimones. Parteix-ne 3 per la meitat de llarg i buida'n la polpa amb una cullera, sense trencar la closca: seran els recipients de les postres.
-
-2. Passa la polpa per un colador fi i mesura uns 110 ml de suc. Reserva'l.
-3. Ratlla la pell de la quarta llimona.
+1. Renta les llimones i ratlla la pell d'una. Reserva la ratlladura.
+2. Parteix-ne 4 per la meitat de llarg i buida'n la polpa amb una cullera, sense trencar la closca: seran els recipients de les postres.
+3. Passa la polpa per un colador fi i mesura uns 110 ml de suc. Reserva'l.
 4. A la cassola, posa-hi la nata, el sucre blanc i la ratlladura de llimona. Porta-ho a ebullició suau i deixa-ho reduir lleugerament, remenant, fins que cobreixi el revers d'una cullera.
 
 5. Fora del foc, incorpora-hi els 110 ml de suc de llimona mentre hi remenes amb les varetes, fins que quedi una crema fina i homogènia.
