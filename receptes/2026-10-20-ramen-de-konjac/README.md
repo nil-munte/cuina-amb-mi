@@ -31,7 +31,7 @@ video:
 - 200 g de xampinyons o xiitakes
 - 120 g de pastanaga
 - 2 cebes tendres petites
-- 6 ous (15 quarts per als tastos i 1 quart sobrant)
+- 4 ous (15 quarts per als tastos i 1 quart sobrant)
 - 15 g de sèsam torrat
 - 1 llima
 
